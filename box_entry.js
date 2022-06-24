@@ -19,3 +19,8 @@ function createDocNo(){
 document.getElementById("saveData").addEventListener('click',function(){
     console.log(docNo, date, l, b, h, ribbedRing, initialBoxNos);
 });
+
+document.getElementById("saveData").addEventListener('click',function(){
+    console.log(docNo, date, l, b, h, ribbedRing, initialBoxNos);
+});
+
