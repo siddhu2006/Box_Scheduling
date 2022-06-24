@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="box_entry.css">
+    <title>Mould Box Entry</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="container">BoxMaster :- Mould Box Entry</h1>
+        <div class="navbar">
+            <button>Add new</button>
+            <button id="saveData">Save Data</button>
+            <button>delete data</button>
+            <input type="text">
+            <span>Search</span>
+        </div>
+        <hr>
+        <div class="table">
+            <table class="table table-bordered table-hover table-responsive">
+                <thead>
+                  <tr class="table-dark">
+                    <th scope="col" class="col">Doc No.</th>
+                    <th scope="col" class="col">Date</th>
+                    <th scope="col" class="col">Box Length</th>
+                    <th scope="col" class="col">Box Width</th>
+                    <th scope="col" class="col">Box Height</th>
+                    <th scope="col" class="col">Box Type</th>
+                    <th scope="col" class="col">Initial Box Nos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                     <td><input type="text" class="col docNo" id="docNo" size="5" disabled></td>
+                     <td><input type="date" class="col date" id="date"></td>
+                     <td><input type="number" class="col l" id="l" oninput="createDocNo()"></td>
+                     <td><input type="number" class="col b" id="b" oninput="createDocNo()"></td>
+                     <td><input type="number" class="col h" id="h" oninput="createDocNo()"></td>
+                     <td><select name="ribbedRing" class="col" id="ribbedRing" oninput="createDocNo()">
+                         <option value="Ribbed">Ribbed</option>
+                         <option value="Ring">Ring</option>
+                     </select></td>
+                     <td><input type="number" class="col initialBoxNos" id="initialBoxNos" oninput="computeNetQty()"></td>
+                  </tr>
+                </tbody>
+              </table>              
+        </div>
+        <div class="table">
+            <br><caption>Modification Data</caption>
+            <table class="table table-bordered table-hover table-responsive">
+                <thead>
+                  <tr class="table-dark">
+                    <th scope="col" class="col">New Additions</th>
+                    <th scope="col" class="col">Scrapped</th>
+                    <th scope="col" class="col">Net Quantity</th>
+                    <th scope="col" class="col">Creator</th>
+                    <th scope="col" class="col">Last Modofied By</th>
+                    <th scope="col" class="col">Last Modified Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                     <td><input type="number" class="col newAdditions" id="newAdditions" value="0" disabled></td>
+                     <td><input type="number" class="col Scrapped" id="Scrapped" value="0" disabled></td>
+                     <td><input type="number" class="col netQty" id="netQty" disabled></td>
+                     <td><input type="text" class="col creator" id="creator" size="5" disabled></td>
+                     <td><input type="text" class="col modifiedBy" id="modifiedBy" size="5" disabled></td>
+                     <td><input type="date" class="col modifiedDate" id="modifiedDate" disabled></td>
+                  </tr>
+                </tbody>
+              </table>              
+        </div>
+    </div>
+    <script src="box_entry.js"></script>
+</body>
+</html>
