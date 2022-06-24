@@ -4,18 +4,16 @@ input[type="number"]{
 
 body{
     align-items: center;
+    background-color: aquamarine;
 }
 .container{
     align-self: center;
 }
 
-table{
-    width: 100%;
-}
 
 table, th, td{
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid blue;
     border-collapse: collapse;
     padding-top: 2px;
     padding-bottom: 2px;
